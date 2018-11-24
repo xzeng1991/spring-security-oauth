@@ -5,7 +5,7 @@ home: ../
 ---
 
 
-# Welcome
+# 欢迎
 
 OAuth for Spring Security provides an [OAuth](http://oauth.net)
 implementation for
