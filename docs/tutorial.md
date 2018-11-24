@@ -5,40 +5,32 @@ home: ../
 ---
 
 
-# Tutorial
+# 入门指导
 
-## Introduction
+## 介绍
 
-There's a good [getting started guide](http://www.hueniverse.com/hueniverse/2007/10/beginners-gui-1.html) that illustrates OAuth
-1.0 by describing two different (but related) services.  One is a photo-sharing application.  The other is a photo-printing
-application.  In OAuth terms, the photo sharing application is the OAuth _provider_ and the photo printing application
-is the OAuth _consumer_ or _client_.
+(http://www.hueniverse.com/hueniverse/2007/10/beginners-gui-1.html)是一个不错的入门指引，通过两个不同又有关联的服务说明了OAuth 1.0.
+一个是照片分享的应用.另一个是照片打印的应用.在OAuth项目,照片分享应用是OAuth服务端,照片打印应用是OAuth客户端.
 
-For this tutorial, we will see OAuth for Spring Security in action by deploying a photo-sharing application and a
-photo-printing application on our local machine.  We'll name the photo-sharing application "Sparklr" and the
-photo-printing application "Tonr".  A user named "Marissa" (who has an account at both Sparkr and Tonr) will use Tonr
-to access her photos on Sparklr without ever giving Tonr her credentials to Sparklr.
+关于这个指导,我们会用OAuth和Spring Security在本地开发一个照片分享应用盒一个照片打印应用.我们将照片分享应用命名为"Sparklr",将照片打印应用命名为"Tonr".
+一个叫"Marissa"的用户(在Sparkr和Tonr都有账号)会通过Tonr去获取她在Sparklr的照片,却不给Tonr认证信息.
 
-There is a Sparklr application for both OAuth 1.0 and for OAuth 2.0,
-likewise Tonr. The best way to run them is to clone or download the
-[repo on github](https://github.com/spring-projects/spring-security-oauth)
-and run from source code See the
-[samples/README.md](https://github.com/spring-projects/spring-security-oauth/tree/master/samples)
-for detailed instructions. 
+现在有一个Sparklr应用分别使用OAuth 1.0和OAuth 2.0实现,Tonr也是.我们可以下载的代码
+(https://github.com/spring-projects/spring-security-oauth)
+然后参照下面文章的详细教程去运行应用
+[samples/README.md](https://github.com/spring-projects/spring-security-oauth/tree/master/samples). 
 
 OAuth 1.0|OAuth 2.0
 ---------|---------
 Sparklr 1 | Sparklr 2
 Tonr 1 | Tonr 2
 
-Each application is a standard [Maven](http://maven.apache.org/) project, so you will need Maven installed. Each
-application is also a Spring MVC application with Spring Security integrated. If you are familiar with Spring and Spring
-Security, the configuration files will look familiar to you (the OAuth2 samples use a single application context whereas
-many MVC applications use a root context and a child for the DispatcherServlet).
+每个应用都是一个标准的[Maven](http://maven.apache.org/) 工程,所以你要先安装Maven.每个应用都是集成了Spring Security的Spring MVC应用.如果你熟悉Spring和Spring
+Security, 那你将会对那些配置文件很熟悉(OAuth2样例是一个用实例工程).
 
-## Setup
+## 系统搭建
 
-Checkout the Sparklr and Tonr applications, and take a look around. Note especially the Spring configuration files in `src/main/webapp/WEB-INF`.
+检出Sparklr和Tonr工程,然后大致看一下.尤其注意一下`src/main/webapp/WEB-INF`下的配置文件.
   
 For Sparklr, you'll notice the definition of the OAuth provider mechanism and the consumer/client details along with the
 [standard spring security configuration](http://docs.spring.io/spring-security/site/docs/4.0.x/reference/html/ns-config.html) elements.  For Tonr,
